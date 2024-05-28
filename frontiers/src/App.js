@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import Login from './Login';
 import axios from 'axios';
 
 function App() {
@@ -17,12 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Data from Azure SQL Database</h1>
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>{item.name}</li> // Replace 'name' with your column name
-        ))}
-      </ul>
+      <header className="App-header">
+        <Login />
+      </header>
     </div>
   );
 }
